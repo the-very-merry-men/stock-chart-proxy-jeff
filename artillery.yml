@@ -1,0 +1,25 @@
+config:
+  target: 'http://localhost:3010'
+  phases:
+    - duration: 180
+      arrivalRate: 300
+    # - duration: 60
+    #   arrivalRate: 200
+    # - duration: 60
+    #   arrivalRate: 300
+ 
+scenarios:
+  - weight: 70/100
+    name: 'Realistic Search'
+    flow:
+    - get:
+        url: "/stocks/id"
+        json: 
+          id: "{{ $randomNumber(1,1000) }}"
+  - weight: 30/100
+    name: 'Realistic Search'
+    flow:
+    - get:
+        url: "/stocks/id"
+        json: 
+          id: "{{ $randomNumber(1,10000000) }}"
