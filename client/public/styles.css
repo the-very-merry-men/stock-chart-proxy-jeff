@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'dinpro';
+  src: url('fonts/dinpro.otf');
+}
+
+header.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* border: 2px solid red; */
+  z-index: 1;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+main.main-container {
+  top: 80px;
+  /* border: 2px solid red; */
+  margin: 0 auto;
+  width: 1024px;
+  position: relative;
+  height: 1000px;
+}
+
+#earnings-chart {
+  width: 680px;
+  /* border: 2px solid red; */
+}
+
+.sidebar-content {
+  position: absolute;
+  right: 300px;
+}
+
+#trade-panel {
+  background-color: white;
+  position: fixed;
+  top: 95px;
+  width: 275px;
+  /* border: 2px solid red; */
+}
