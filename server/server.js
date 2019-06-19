@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-app.use('/stocks/', proxy('http://localhost:3001/stocks/'));
+app.use('/stocks/', proxy('http://ec2-13-58-156-101.us-east-2.compute.amazonaws.com:3001/stocks'));
+
 
 
 app.listen(port, () => console.log('listening on: ', port))
